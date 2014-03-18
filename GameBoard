@@ -1,0 +1,137 @@
+
+
+
+public(?) class GameBoard {
+
+/* -GameBoard() constructs a default 8 x 8 gameboard to play on.
+- Every spot has a player attribute 
+-Only need a 2D array, because we only need to store one int (which player is occupying the space)
+*/
+
+
+ 	final static int EMPTY = -1;
+	private int [][] gameBoard; 
+
+
+
+
+	public GameBoard () {
+		gameBoard = new int[8][8];
+	}
+
+
+
+
+	public int getPlayer(int x, int y) {
+
+	}
+
+
+	public void setChip(int x, int y, int player) {
+		gameBoard[x][y] = player;
+	}
+
+
+	public Boolean isFull() {
+
+	}
+	
+
+
+	public boolean isValidMove(int x, int y, int player) {
+			//	**MANISHAAAAA**
+
+
+	}
+
+	public boolean isEmpty(int x, int y) {
+		if (gameBoard[x][y] == -1) {
+			return True;
+		}
+		else {
+			return False;
+		}
+	}
+
+
+	public boolean isCluster(int x, int y, int player) {
+		/* public boolean isCluster(int x, int y) {  
+    int count;
+    (check neighbors)
+        if we find a neighbor from the same player;
+            if count = 2 {
+                return true;
+            else {
+                count ++;
+                check this neighbor’s neighbor;
+            
+        } else {
+             return false;
+        }
+        */
+
+	}
+
+
+	public DList allValidMoves() {
+		DList moves = new DList;
+		for (int i = 0; i < 8; i++) {
+			for (int j = 0; j < 8; j++) {
+				if isValidMove(i, j) {
+					
+				}
+			}
+		}
+
+
+		 /*     Public DList allValidMoves ( int[][]gameBoard) 
+        create empty DList validMoves
+        for each space (x, y) in gameBoard:
+            if isValidMove(x, y) is true, add to validMoves (insertEnd)
+            go to next spot in gameBoard
+        return DList validMoves
+        */
+
+	}
+
+
+	public DList findConnections(int x, int y, int player){
+		/* SOPHIE
+
+		Start at chip’s (x, y) coordinates
+        Make empty list (DList) of connections
+        check each direction (up, down, left, right, 4 diagonals)
+            up → (x, y+1) 
+            down → (x, y-1)
+            left → (x-1, y)
+            right → (x+1, y)
+            diagonal 1 → (x+1, y+1)
+            diagonal 2 → (x+1, y-1)
+            diagonal 3 → (x-1, y+1)
+            diagonal 4 → (x-1, y+1)
+        if we find our own chip, add the coordinates to the list of connections
+        if we find the opponent’s chip or the end of the gameBoard, skip. 
+    return list
+
+    */
+
+
+	}
+
+	public boolean hasValidNetwork(int player) {
+				//MANISHAAAAA
+	}
+
+	public int boardEvaluation(int player(?)) {
+
+
+	}
+
+	public void Minimax() {
+			//ROSE YAYAYYAYAYAYYAYAYY
+		
+	}
+
+
+
+}
